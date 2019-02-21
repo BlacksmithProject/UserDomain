@@ -19,7 +19,7 @@ final class EmailTest extends TestCase
     public function testItCannotBeInitializedWithNull(): void
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('user.email.must_not_be_null');
+        $this->expectExceptionMessage('credentials.email.must_not_be_null');
 
         new Email(null);
     }
@@ -27,7 +27,7 @@ final class EmailTest extends TestCase
     public function testItCannotBeInitializedWithBlankString(): void
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('user.email.must_not_be_blank');
+        $this->expectExceptionMessage('credentials.email.must_not_be_blank');
 
         new Email('');
     }
@@ -35,7 +35,7 @@ final class EmailTest extends TestCase
     public function testItCannotBeInitializedWithInvalidEmail(): void
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('user.email.must_be_valid');
+        $this->expectExceptionMessage('credentials.email.must_be_valid');
 
         new Email('invalid-email');
     }

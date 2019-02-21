@@ -19,7 +19,7 @@ final class PlainPasswordTest extends TestCase
     public function testItCannotBeInitializedWithNull(): void
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('user.password.must_not_be_null');
+        $this->expectExceptionMessage('credentials.password.must_not_be_null');
 
         new PlainPassword(null);
     }
@@ -27,7 +27,7 @@ final class PlainPasswordTest extends TestCase
     public function testItCannotBeInitalizedWithBlankString(): void
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('user.password.must_not_be_blank');
+        $this->expectExceptionMessage('credentials.password.must_not_be_blank');
 
         new PlainPassword('');
     }

@@ -12,8 +12,8 @@ final class PlainPassword
     public function __construct(?string $password)
     {
         Assert::that($password)
-            ->notNull('user.password.must_not_be_null')
-            ->notBlank('user.password.must_not_be_blank');
+            ->notNull('credentials.password.must_not_be_null')
+            ->notBlank('credentials.password.must_not_be_blank');
 
         $this->value = $password;
     }
