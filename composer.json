@@ -21,12 +21,12 @@
   },
   "autoload": {
     "psr-4": {
-      "BSP\\User\\": "src/"
+      "BSP\\Credentials\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "BSP\\User\\Tests\\": "tests/"
+      "BSP\\Credentials\\Tests\\": "tests/"
     }
   }
 }

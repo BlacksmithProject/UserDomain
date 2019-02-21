@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace BSP\User\Tests\ValueObject;
+namespace BSP\Credentials\Tests\ValueObject;
 
 use Assert\InvalidArgumentException;
-use BSP\User\ValueObject\Email;
+use BSP\Credentials\ValueObject\Email;
 use PHPUnit\Framework\TestCase;
 
 final class EmailTest extends TestCase

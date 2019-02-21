@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace BSP\User\ValueObject;
+namespace BSP\Credentials\ValueObject;
 
 use Assert\Assert;
 
