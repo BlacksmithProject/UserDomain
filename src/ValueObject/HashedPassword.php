@@ -3,19 +3,15 @@ declare(strict_types=1);
 
 namespace BSP\Credentials\ValueObject;
 
-use Assert\Assert;
+use BSP\Credentials\Port\PasswordEncoder;
 
 final class HashedPassword
 {
     private $value;
 
-    public function __construct(?string $password)
+    public function __construct(PlainPassword $password, PasswordEncoder $passwordEncoder)
     {
-        Assert::that($password)
-            ->notNull('user.password.must_not_be_null')
-            ->notBlank('user.password.must_not_be_blank');
-
-        $this->value = $password;
+        $this->value = $passwordEncoder->hash($password);
     }
 
     public function value(): string
