@@ -5,6 +5,8 @@
 
 ### BREAKING CHANGES
 
+- remove `\BSP\Credentials\Port\PasswordEncoder` from `\BSP\Credentials\ValueObject\HashedPassword` constructor.
+
 ### New features
 
 ### Bugfixes

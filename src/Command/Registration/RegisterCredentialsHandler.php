@@ -42,7 +42,7 @@ final class RegisterCredentialsHandler implements CommandHandler
         $credentials = new Credentials(
             $registerCredentials->credentialsId(),
             $registerCredentials->email(),
-            new HashedPassword($registerCredentials->plainPassword(), $this->passwordEncoder)
+            new HashedPassword($this->passwordEncoder->hash($registerCredentials->plainPassword()))
         );
 
         $this->credentialsWriter->add($credentials);

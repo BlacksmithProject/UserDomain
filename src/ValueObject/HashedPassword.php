@@ -3,15 +3,13 @@ declare(strict_types=1);
 
 namespace BSP\Credentials\ValueObject;
 
-use BSP\Credentials\Port\PasswordEncoder;
-
 final class HashedPassword
 {
     private $value;
 
-    public function __construct(PlainPassword $password, PasswordEncoder $passwordEncoder)
+    public function __construct(string $hash)
     {
-        $this->value = $passwordEncoder->hash($password);
+        $this->value = $hash;
     }
 
     public function value(): string
