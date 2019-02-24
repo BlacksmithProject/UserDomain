@@ -1,6 +1,6 @@
 {
-  "name": "blacksmith-project/php-library",
-  "description": "A PHP Library",
+  "name": "blacksmith-project/credentials-domain",
+  "description": "A PHP Library providing a credentials domain",
   "type": "library",
   "license": "MIT",
   "authors": [
