@@ -3,11 +3,12 @@ declare(strict_types=1);
 
 namespace BSP\Credentials\Command\Registration;
 
+use BSP\CommandBus\Command;
 use BSP\Credentials\ValueObject\CredentialsId;
 use BSP\Credentials\ValueObject\Email;
 use BSP\Credentials\ValueObject\PlainPassword;
 
-final class RegisterCredentials
+final class RegisterCredentials implements Command
 {
     private $credentialsId;
     private $email;

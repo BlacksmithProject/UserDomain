@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace BSP\Credentials\Command\Registration;
 
+use BSP\CommandBus\Command;
+use BSP\CommandBus\CommandHandler;
 use BSP\Credentials\CredentialsDomainException;
 use BSP\Credentials\Entity\Credentials;
 use BSP\Credentials\Port\CredentialsReader;
@@ -10,7 +12,7 @@ use BSP\Credentials\Port\CredentialsWriter;
 use BSP\Credentials\Port\PasswordEncoder;
 use BSP\Credentials\ValueObject\HashedPassword;
 
-final class RegisterCredentialsHandler
+final class RegisterCredentialsHandler implements CommandHandler
 {
     private $credentialsReader;
     private $credentialsWriter;
@@ -27,9 +29,11 @@ final class RegisterCredentialsHandler
     }
 
     /**
+     * @param RegisterCredentials $registerCredentials
+     *
      * @throws CredentialsDomainException
      */
-    public function handle(RegisterCredentials $registerCredentials): void
+    public function handle(Command $registerCredentials): void
     {
         if ($this->credentialsReader->isEmailAlreadyUsed($registerCredentials->email())) {
             throw new CredentialsDomainException('credentials.email.already_used');
