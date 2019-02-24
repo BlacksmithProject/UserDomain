@@ -7,10 +7,14 @@
 
 ### New features
 
-- Added `\BSP\Credentials\Command\Registration\RegisterCredentials`
-- Added `\BSP\Credentials\Bus\CredentialsCommandBus`
-- Added `\BSP\Credentials\Query\FindCredentials`
-
 ### Bugfixes
 
 </details>
+
+## v0.1.0
+
+### New features
+
+- Added `\BSP\Credentials\Command\Registration\RegisterCredentials`
+- Added `\BSP\Credentials\Bus\CredentialsCommandBus`
+- Added `\BSP\Credentials\Query\FindCredentials`
