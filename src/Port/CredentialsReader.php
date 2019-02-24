@@ -12,4 +12,6 @@ interface CredentialsReader
     public function isEmailAlreadyUsed(Email $email): bool;
 
     public function get(CredentialsId $credentialsId): Credentials;
+
+    public function findByEmail(Email $email): Credentials;
 }
