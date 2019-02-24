@@ -1,2 +1,1 @@
-# BlacksmithProject - userDomain
-
+# BlacksmithProject - credentialsDomain
