@@ -14,11 +14,7 @@ final class HashedPasswordTest extends TestCase
 {
     public function testItCanBeInitialized(): void
     {
-        /** @var PasswordEncoder|MockObject $passwordEncoder */
-        $passwordEncoder = $this->createMock(PasswordEncoder::class);
-        $passwordEncoder->expects($this->once())->method('hash')->willReturn('hashed-password');
-
-        $plainPassword = new HashedPassword(new PlainPassword('winter is coming'), $passwordEncoder);
+        $plainPassword = new HashedPassword('hashed-password');
 
         $this->assertSame('hashed-password', $plainPassword->value());
     }
