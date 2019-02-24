@@ -5,8 +5,6 @@
 
 ### BREAKING CHANGES
 
-- remove `\BSP\Credentials\Port\PasswordEncoder` from `\BSP\Credentials\ValueObject\HashedPassword` constructor.
-
 ### New features
 
 ### Bugfixes
@@ -20,3 +18,9 @@
 - Added `\BSP\Credentials\Command\Registration\RegisterCredentials`
 - Added `\BSP\Credentials\Bus\CredentialsCommandBus`
 - Added `\BSP\Credentials\Query\FindCredentials`
+
+## v0.2.0
+
+### BREAKING CHANGES
+
+- remove `\BSP\Credentials\Port\PasswordEncoder` from `\BSP\Credentials\ValueObject\HashedPassword` constructor.
